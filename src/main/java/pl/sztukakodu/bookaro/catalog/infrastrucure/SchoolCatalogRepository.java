@@ -1,5 +1,6 @@
 package pl.sztukakodu.bookaro.catalog.infrastrucure;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Repository;
 import pl.sztukakodu.bookaro.catalog.domain.Book;
 import pl.sztukakodu.bookaro.catalog.domain.CatalogRepository;
@@ -9,6 +10,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 @Repository
+@Primary
 class SchoolCatalogRepository implements CatalogRepository {
     //concurent zeby bylo w srodowisku wspolbieznym
     private final Map<Long, Book> storage = new ConcurrentHashMap<>();

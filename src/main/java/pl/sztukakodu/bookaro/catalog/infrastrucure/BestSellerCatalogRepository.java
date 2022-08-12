@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 @Repository
-@Primary
+
 class BestSellerCatalogRepository implements CatalogRepository {
     //concurent zeby bylo w srodowisku wspolbieznym
     private final Map<Long, Book> storage = new ConcurrentHashMap<>();
